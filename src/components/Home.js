@@ -1,22 +1,14 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { dark, light } from "./altcomponents/Child1";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-function Home() {
-  const dispatch = useDispatch();
-  const screen = useSelector((state) => state.activeTheme.theme);
+const Home = () => {
+  const message = useSelector((state) => state.activeTheme.message);
 
   return (
-    <div className={`homeContainer ${!screen ? 'homeDark' : 'homeLight'}`}>
-      Home sayfası
-      <button onClick={() => dispatch(dark())}>Koyu tema</button>
-      <button onClick={() => dispatch(light())}>Açık tema</button>
-      <br />
-      <br />
-      {!screen ? "siyah ekran" : "beyaz ekran"}
-      <br />
+    <div>
+      <p>{message}</p>
     </div>
   );
-}
+};
 
 export default Home;

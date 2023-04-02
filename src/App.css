@@ -2,12 +2,14 @@
   text-align: center;
 }
 
-.homeLight {
+.appLight {
   background: white;
   color: black;
+  height: 100vh;
 }
 
-.homeDark {
+.appDark {
   background: black;
   color: white;
+  height: 100vh;
 }
