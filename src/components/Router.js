@@ -7,15 +7,18 @@ function Router() {
     const password = useSelector((state) => state.loginPage.password);
     const [control, setControl] = useState(false);
 
-    if (password === 'Kesan') {
-        setControl(true);
-    } else {
-        alert('Hatalı Giriş');
+    const handleClick = () => {
+        if (password === 'Kesan') {
+
+            setControl(true)
+
+        }
     }
 
     return (
         <div>
-            {control && <Home/>}
+            <button onClick={handleClick} >Giriş yap</button>
+            {control && <Home />}
         </div>
     );
 }

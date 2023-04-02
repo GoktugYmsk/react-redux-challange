@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './components/Login';
+import Router from './components/Router';
 
 
 
@@ -12,6 +13,16 @@ function App() {
       <br />
       {/* <Context/> */}
       <Login />
+      <Router/>
+      {/**********************************************************
+       *                                                         *
+       *                                                         *
+       *    React-Router `navlink yapıları` kullan
+       *    `Helmet` kullan
+       *                                                         *
+       *                                                         *
+       ***********************************************************
+      */}
     </div>
   );
 }
