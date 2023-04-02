@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     theme: false,
     message: '',
+    deneme: '',
 }
 
 export const Child1 = createSlice({
@@ -17,11 +18,14 @@ export const Child1 = createSlice({
         },
         setMessage: (state, action) => {
             state.message = action.payload;
+        },
+        setDeneme:(state,acticon) => {
+            state.deneme = acticon.payload;
         }
     },
 })
 
 
-export const { dark, light,setMessage } = Child1.actions
+export const { dark, light,setMessage,setDeneme } = Child1.actions
 
 export default Child1.reducer
